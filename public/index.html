@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Root13</title>
+	</head>
+	<body>
+		
+        <script type="text/javascript"> 
+			function encrypt(){
+
+                var pt = document.getElementById("Input").value;
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET","http://localhost:3000/encrypt?plaintext=" + pt, true);
+				xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+                xhr.onreadystatechange = function() {
+        			if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+            			document.getElementById("response-div").innerHTML = this.responseText;
+       				}
+				};
+
+				xhr.send();
+   			}
+
+
+			
+		</script>
+
+        <h1>Ceaseasy Cipher</h1>
+        <!--put text area here-->
+        <textarea id="Input" cols="30" rows="10" accept-charset="utf-8"></textarea>
+        <br>
+        <button onclick="encrypt()">Encrypt it!</button>
+
+        <div id="response-div"></div>
+
+		
+	</body>
+</html>
