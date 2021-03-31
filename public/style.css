@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    margin: 0px;
+	font-size: 1.1em;
+	background-color:#77AF9C;
+}
+
+h1 {
+    font-size: 75px;
+    color: #285943;
+}
+
+textarea{
+    font-size: 30px;
+    background-color: #4C3B4D;
+    color: #c74072;
+    border-color: #C1666B;
+}
+
+button{
+    font-size: 17px;
+    margin: 15px;
+    background-color: #4C3B4D;
+    color: #c74072;
+}
+
+hr{
+    margin: auto;
+    width: 680px;
+    border-color: #285943;
+    color: #285943;
+}
+
+#response-div{
+    font-size: 48px;
+    color: #FFEEDB;
+    margin: 30px;
+}
